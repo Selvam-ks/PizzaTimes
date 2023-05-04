@@ -1,0 +1,16 @@
+.dashboard{
+    margin-top: 50px;
+    margin-left: 65px;
+    display: grid;
+    margin-right: 60px;
+    grid-gap: 1rem;
+}
+
+.card_view{
+    position: sticky;
+    top: 2rem;
+    bottom: 1rem;
+}
+.dashboard > div{
+    margin-top: 40%;
+}

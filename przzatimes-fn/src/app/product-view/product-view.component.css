@@ -1,0 +1,97 @@
+.card_container{
+    display: grid;
+    row-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    /* grid-template-columns: auto auto auto auto; */
+}
+
+.main_card{
+    float: left;
+    /* margin-left: 50px;
+    margin-bottom: 50px; */
+    width: 290px;
+    max-width: 290px;
+    max-height: auto;
+    border-radius: 5px;
+}
+.nvg{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: 100% 0%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.vg{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: 0% 50%;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+
+}
+.prt_img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 160px;
+}
+
+.price{
+    font-size: 23px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 28%;
+    left: 5%;
+    
+}
+.price::before{
+    content: "₹ ";
+}
+
+mat-card-header{
+    margin-top: -18px;
+}
+ mat-card-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.discription{
+    width: 90%;
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display:-webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: rgba(126, 126, 126, 0.5);
+    font-size: .9rem;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: space-between;
+}
+.counter{
+    width: 40px;
+}
+#plues{
+    font-size: 1.1em;
+}
+#minus{
+    font-size: 1.25em;
+}
+hr{
+    padding-left: 10px;
+}
+.product_prp{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}

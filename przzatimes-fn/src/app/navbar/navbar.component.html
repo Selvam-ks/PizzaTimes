@@ -1,0 +1,36 @@
+<div>
+    <mat-toolbar color="primary">
+      <div>
+        <span><h2>PIZZA TIMES</h2></span>
+      </div>
+    <div>
+      <button mat-icon-button *ngIf="value_edit" routerLink="/edit-product">
+        <mat-icon>library_add</mat-icon>
+      </button>
+      <button routerLink="/dashboard" mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </button>
+      <!-- *ngIf="value_crt" -->
+      <button *ngIf="value_crt" mat-icon-button routerLink="/dashboard/view-cart" >
+        <mat-icon matBadge="1" matBadgeColor="warn">add_shopping_cart</mat-icon>
+      </button>
+      <button *ngIf="value" mat-icon-button (click)="logOutAll()">
+          <mat-icon>logout</mat-icon>
+      </button>
+      <button *ngIf="!value" mat-icon-button routerLink="/login">
+        <mat-icon>login</mat-icon>
+      </button>
+      <button *ngIf="!value" routerLink="/registration" mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </div>
+    </mat-toolbar>
+    </div>
+    <div>
+      <!-- <app-home></app-home> -->
+      <!-- <app-edit-product></app-edit-product> -->
+      <!-- <app-dashboard></app-dashboard> -->
+      <router-outlet></router-outlet>
+    </div>
+    
+  

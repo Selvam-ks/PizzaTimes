@@ -1,0 +1,58 @@
+
+<div class="main_grid_cont">
+    <div class="card_container">
+      <div *ngIf="!cartEmpty">
+        <h1>Cart Empty</h1>
+        <button mat-button routerLink="/dashboard" color="warn">Back</button>
+      </div>
+    <div *ngFor="let product of productList">
+        <mat-card class="main_card">
+            <ng-container [ngSwitch]="product.type_vg">
+                <img *ngSwitchCase="'NV'" class="nvg" src="../../assets/test-img/1_nv_2_vv.png" alt="" srcset="">
+                <img *ngSwitchCase="'VG'" class="vg" src="../../assets/test-img/1_nv_2_vv.png" alt="" srcset="">
+            </ng-container>
+            <!-- <img class="prt_img" src="../../assets/test-img/{{product.imageurl}}.jpg" alt=""> -->
+            <img class="prt_img" src="{{product.imageurl}}" alt="">
+            <span class="price">{{product.price}}</span>
+            <div>
+            </div>
+            <mat-card-header>
+              <mat-card-title>{{product.name}}</mat-card-title>
+              </mat-card-header>
+            <mat-card-content>
+                <p class="discription">
+                 {{product.description}}
+                </p>
+            </mat-card-content>
+              <hr>
+              <div class="product_prp">
+                <div class="size">
+                  <h5>Size</h5>
+                  <span>{{product.size}}</span>
+                </div>
+                <div class="crust">
+                  <h5>Crust</h5>
+                  <span>{{product.crust}}</span>
+                </div>
+              </div>
+            <mat-card-actions>
+                <div>
+                  <div class="btn-group me-2" role="group" aria-label="First group">
+                    <button type="button" *ngIf="product.qty==1" class="btn btn-danger delete_btn" (click)="gtySub(product)"><mat-icon class="delete_icon">delete</mat-icon></button>
+                    <button type="button" *ngIf="product.qty > 1" class="btn btn-danger" (click)="gtySub(product)">-</button>
+                    <input type="text" class="counter" value="{{product.qty}}" readonly>
+                    <button type="button" class="btn btn-success" (click)="gtyAdd(product)">+</button>
+                  </div>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    </div>
+    <div class="calc_div">
+        <div class="d-flex justify-content-between me-4">
+            <p id="total_text">Total Price :</p>
+            <p class="total_price">{{totalPrice}}</p>
+        </div>
+        <button (click)="conformCart()" >Oder Now</button>
+    </div>
+</div>

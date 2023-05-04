@@ -1,0 +1,42 @@
+<div class="main_grid_cont">
+<div class="card_container">
+<div *ngFor="let product of productData">
+    <mat-card class="main_card border border-light shadow mb-5 bg-white rounded">
+        <ng-container [ngSwitch]="product.type_vg">
+            <img *ngSwitchCase="'NV'" class="nvg" src="../../assets/test-img/1_nv_2_vv.png" alt="" srcset="">
+            <img *ngSwitchCase="'VG'" class="vg" src="../../assets/test-img/1_nv_2_vv.png" alt="" srcset="">
+        </ng-container>
+        <!-- <img class="prt_img" src="../../assets/test-img/{{product.imageurl}}.jpg" alt=""> -->
+        <img class="prt_img" src="{{product.imageurl}}" alt="">
+        <span class="price">{{product.price}}</span>
+        <div>
+        </div>
+        <mat-card-header>
+          <mat-card-title>{{product.name}}</mat-card-title>
+          </mat-card-header>
+        <mat-card-content>
+            <p class="discription">
+              {{product.description}}
+            </p>
+        </mat-card-content>
+          <hr>
+          <div class="product_prp">
+            <div class="size">
+              <h5>Size</h5>
+              <span>{{product.size}}</span>
+            </div>
+            <div class="crust">
+              <h5>Crust</h5>
+              <span>{{product.crust}}</span>
+            </div>
+          </div>
+        <mat-card-actions>
+            <button type="button" *ngIf="value_role" class="btn btn-warning" routerLink="edit-product/{{product.name}}">Edit</button>
+            <div>
+              <button *ngIf="!value_role" (click)="add_count(product)" type="button" class="btn btn-outline-success">ADD TO CART</button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>
+</div>
+</div>

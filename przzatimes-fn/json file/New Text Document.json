@@ -1,0 +1,145 @@
+{
+  "user": [
+    {
+      "username": "selvam",
+      "email": "selvam@g",
+      "password": "Ksj@123dd",
+      "contact": "9500000215",
+      "address": {
+        "street": "aswdsa",
+        "city": "asdwdas",
+        "state": "adsdwd",
+        "zipcode": "600072"
+      },
+      "id": 1
+    }
+  ],
+  "ProductList":[
+    {
+        "name": "new_peppy_paneer",
+        "product_id": 1001,
+        "type_vg": "vG",
+        "size": "L",
+        "price": 250,
+        "qty": 0,
+        "imageurl": "new_peppy_paneer"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1002,
+        "type_vg": "NV",
+        "size": "S",
+        "price": 130,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_veg_extravaganza",
+        "product_id": 1003,
+        "type_vg": "VG",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_veg_extravaganza"
+      },
+      {
+        "name": "new_pepper_barbeque_chicken",
+        "product_id": 1004,
+        "type_vg": "VG",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_pepper_barbeque_chicken"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1005,
+        "type_vg": "NV",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_peppy_paneer",
+        "product_id": 1006,
+        "type_vg": "NV",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_peppy_paneer"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1007,
+        "type_vg": "VG",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_peppy_paneer",
+        "product_id": 1008,
+        "type_vg": "NV",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_peppy_paneer"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1009,
+        "type_vg": "VG",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_peppy_paneer",
+        "product_id": 1010,
+        "type_vg": "NV",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_peppy_paneer"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1012,
+        "type_vg": "NV",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1013,
+        "type_vg": "VG",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1014,
+        "type_vg": "NV",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_cheese_n_corn"
+      },
+      {
+        "name": "new_cheese_n_corn",
+        "product_id": 1015,
+        "type_vg": "VG",
+        "size": "L",
+        "price": 15.35,
+        "qty": 0,
+        "imageurl": "new_veg_extravaganza"
+      }
+  ]
+}

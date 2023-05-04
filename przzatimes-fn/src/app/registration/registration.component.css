@@ -1,0 +1,53 @@
+
+.main_div_reg{
+    margin-top: 25px;
+    width: 30rem;
+    /* display: flex;
+    flex-direction: column; */
+    position:absolute;
+    animation: appear 1s 1 ;
+    left: 67%;
+    top: 10%;
+}
+.out_from{
+    opacity: 0;
+}
+@keyframes appear {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes dissip {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.main_card{
+    width: 100%;
+    padding: 10px;
+
+}
+#user > mat-form-field{
+    width: 95%;
+    
+}
+#address > mat-form-field{
+    width: 220px;
+    margin-left: 10px;
+}
+.loginReq{
+    text-align: center;
+}
+.loginReq > span{
+    color: blue;
+    cursor: pointer;
+}

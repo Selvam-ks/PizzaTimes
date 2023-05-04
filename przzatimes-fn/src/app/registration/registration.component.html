@@ -1,0 +1,82 @@
+{{Userdetail.value|json}}
+<!-- <div>
+  <button class="register_in_out" (click)="transcaleForm()">Register</button>
+</div> -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="../../assets/test-img/new_cheese_n_corn.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../../assets/test-img/new_chicken_sausage.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/test-img/new_margherita_2502.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button> -->
+</div>
+
+<div class="main_div_reg">
+<mat-card class="main_card">
+    <form [formGroup]="Userdetail" (ngSubmit)="addUser()">
+    <div id="user">
+        <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput type="text"  formControlName="username">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>Email Id</mat-label>
+            <input matInput type="text" formControlName="email">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="text" formControlName="password">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>Contact Number</mat-label>
+            <input matInput type="tel" formControlName="contact">
+        </mat-form-field>
+    </div>
+        <div id="address" formGroupName="address">
+            <h3>Address</h3>
+            <mat-form-field id="maxWidth">
+                <mat-label>Street:</mat-label>
+                <input matInput id="street" type="text" formControlName="street">
+            </mat-form-field>
+            
+            <mat-form-field>
+                <mat-label>State</mat-label>
+                <!-- <input matInput type="text" formControlName="state"> -->
+                <mat-select formControlName="state" name="state" (ngModelChange)="onChangeState()">
+                  <mat-option>Select</mat-option>
+                  <mat-option *ngFor="let stateD of states" [value]="stateD.state">{{stateD.state}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>City</mat-label>
+              <!-- <input matInput type="text" formControlName="state"> -->
+              <mat-select formControlName="city" name="state" (ngModelChange)="allCity">
+                <mat-option>Select</mat-option>
+                <mat-option *ngFor="let city of allCity" [value]="city">{{city}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+          <!-- <br> -->
+            <mat-form-field id="maxWidth">
+                <mat-label>Zip Code</mat-label>
+                <input matInput type="number" formControlName="zipcode">
+            </mat-form-field>
+            </div>
+        <button type="submit" mat-flat-button color="primary" [disabled]="!Userdetail.valid">Submit</button>
+    </form>
+    <p class="loginReq">Already have a account?.. </p><label routerLink="/login">Login</label>
+    
+</mat-card>
+</div>
